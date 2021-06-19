@@ -28,7 +28,9 @@ def get_sales_data():
     """
     Inside the try, converts all strings values into integers. Raises ValueError if strings cannot be converted into int, or if there aren't exactly six values.
     """
+
     try: 
+        [int(value) for value in values]
         if len(values) != 6:
             raise ValueError(
         f"Exactly six values required, you provided {len(values)}"
